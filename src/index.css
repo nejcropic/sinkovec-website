@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Forum&display=swap');
+
+
+@font-face {
+  font-family: 'Stoehr-numbers';
+  src:url('../fonts/Stoehr-numbers.ttf.woff') format('woff'),
+      url('../fonts/Stoehr-numbers.ttf.svg#Stoehr-numbers') format('svg'),
+      url('../fonts/Stoehr-numbers.ttf.eot'),
+      url('../fonts/Stoehr-numbers.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  /* colors */
+  --mainColor: hsl(23, 95%, 52%); 
+  --secondaryColor: rgba(255,204,41,255);
+  --textColor: #eee;
+  --backgroundColor: #141414;
+  --cardColor: rgba(255,255,255,1);
+  --transparentBlackColor: rgba(0, 0, 0,0.55);
+  --transparentWhiteColor: rgba(255, 255, 255,0.55);
+  --white: hsla(0, 0%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --grey: grey;
+  /* fonts */
+  --fontFamily-forum: 'Forum', cursive;
+  --fontFamily-dm_sans: 'DM Sans', sans-serif;
+  --fontFamily-main: 'Stoehr-numbers';
+  /* --fontFamily-main: "Days One", sans-serif; */
+  --fontFamily-text: 'DM Sans', sans-serif;
+  /* font size */
+  --fontSizePc: 4em;
+  --fontSizePhone: 2rem;
+  --lineRadius: 15px;
+
+}
+
+*{
+  padding: 0;
+  margin: auto; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--mainColor);
+  color:  var(--eerie-black-1);
+}
+*::-webkit-scrollbar-thumb {
+  color: var(--eerie-black-1);
+}
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  background-color: var(--eerie-black-1);
+}
+
+a {
+  text-decoration: none;
+}

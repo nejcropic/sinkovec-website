@@ -1,0 +1,263 @@
+.projekti-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0.5rem;
+    background-color: var(--backgroundColor); 
+    background: linear-gradient(to bottom, black,rgb(92, 92, 92), white) 
+}
+.projekti-wrapper h1 {
+    font-size: var(--fontSizePc);
+    font-family: var(--fontFamily-main);
+    font-weight: 700;
+    color: var(--mainColor);
+    margin: 2rem 0;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-wrapper h1{
+        font-size: var(--fontSizePhone);
+    }
+}
+.projekti-container {
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.projekti-cards {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--backgroundColor);
+    font-family: var(--fontFamily-main);
+    margin: auto;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-cards {
+        width: 90%;
+    }
+}
+.projekti-item {
+    position: relative;
+    border: 1px solid rgba(41,71,169,0.1);
+    border-radius: 5px;
+    box-shadow: 0px 20px 24px -4px rgba(17,24,39, 0.1), 0px 8px 8px -4px rgba(17,24,39, 0.8);
+    background-color: var(--white);
+    width: 40%;
+    height: 100%;
+    padding: 2rem;
+    color: var(--backgroundColor);
+    margin: 0;
+    text-align: center;
+}
+.projekti-item:nth-child(odd) {
+    margin-left: 30%;
+}
+.projekti-item:nth-child(even) {
+    margin-right: 30%;
+}
+.projekti-item:nth-child(1) {
+    z-index: 0;
+}
+.projekti-item:nth-child(2) {
+    z-index: 1;
+    top: -2rem;
+}
+.projekti-item:nth-child(3) {
+    z-index: 1;
+    top: -4rem;
+}
+.projekti-item:nth-child(4) {
+    z-index: 1;
+    top: -6rem;
+}.projekti-item::before {
+    z-index: 1;
+    top: -6rem;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-item{
+        width: 90%;
+        height: 8rem;
+        font-size: 1.3rem;
+        padding: 0 1rem;
+        top: 0;
+    }
+    .projekti-item:nth-child(1),
+    .projekti-item:nth-child(2),
+    .projekti-item:nth-child(3),
+    .projekti-item:nth-child(4) {
+        top: 0rem;
+        margin-bottom: 1rem;
+    }
+    .projekti-item:nth-child(odd) {
+        margin-left: 10%;
+    }
+    .projekti-item:nth-child(even) {
+        margin-right: 10%;
+    }
+}
+.projekti-item h3 {
+    position: relative;
+    text-align: left;
+    top: -3rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.projekti-item p {
+    position: relative;
+    top: -3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    font-size: 1.5rem;
+    border-left: 10px solid var(--mainColor);
+}
+.projekti-item a{
+    text-decoration: none;
+    color: var(--backgroundColor);
+    cursor: pointer;
+}
+.projekti-item a:hover{
+    color: var(--mainColor);
+}
+.projekti-item button{
+    position: relative;
+    top: -2rem;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    color: var(--backgroundColor);
+    font-family: var(--fontFamily-dm_sans);
+    font-size: 1rem;
+    font-weight: 800;
+    height: 4rem;
+    width: 12rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border: none;
+}
+.projekti-item button:hover{
+    border: 1px solid var(--mainColor);
+    border-radius: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--mainColor);
+}
+
+@media screen and (max-width: 1000px) {
+    .projekti-item button{
+        height: 2.5rem;
+        width: 9rem;
+    }
+    .projekti-item h3 {
+        font-size: 1.7rem;
+        top: -2rem;
+    }
+    .projekti-item p {
+        font-size: 1.2rem;
+        top: -2rem;
+    }
+}
+
+.projekti-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.projekti-item img{
+    position: relative;
+    top: -4rem;
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+}
+.projekti-item:nth-child(even) img{
+    left: -40%;
+}
+.projekti-item:nth-child(odd) img{
+    right: -40%;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-item img{
+        top: -1.75rem;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+}
+
+
+.projekti-contact {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+.projekti-contact h1{
+    font-size: 2rem;
+}
+.projekti-contact p{
+    font-family: var(--fontFamily-text);
+    font-size: 0.7rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 1000px) {
+    .projekti-contact {
+        width: 100%;
+    }
+    .projekti-contact h1{
+        font-size: 1.5rem;
+    }
+    .projekti-contact p{
+        font-size: 1rem;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.form-container>*{
+    flex-grow: 2;
+    flex: 1 1 15em;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    border: 1px solid var(--backgroundColor);
+    border-radius: 5px;
+}
+form select option:checked {
+    background: var(--mainColor);
+    color: var(--backgroundColor);
+}
+.form-container+div {
+    padding-top: 2rem;
+}
+form p {
+    text-align: left;
+    padding: 0 0 2rem 0 !important;
+}
+
+.submit-button{
+    margin-top: 1rem;
+    background-color: var(--mainColor);
+    font-family: var(--fontFamily-main);
+    font-size: 1.5rem;
+    width: 50%;
+}
+@media screen and (max-width: 1000px) {
+    .submit-button{
+        font-size: 1.5rem;
+        width: 80%;
+    }
+}

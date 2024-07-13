@@ -1,0 +1,111 @@
+.kontakt-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 3rem 3rem;/* 
+    background: linear-gradient(to bottom, var(--backgroundColor), var(--backgroundColor), white) */
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-wrapper {
+        padding: 3rem 1rem;
+    }
+} 
+.kontakt-wrapper h1 {
+    font-size: var(--fontSizePc);
+    font-family: var(--fontFamily-main);
+    font-weight: 700;
+    color: var(--mainColor);
+    margin: 2rem 0;
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-wrapper h1{
+        font-size: var(--fontSizePhone);
+    }
+}
+.kontakt-wrapper h3 {
+    width: 100%;
+    font-size: 3rem;
+    font-family: var(--fontFamily-main);
+    font-weight: 700;
+    color: var(--backgroundColor);
+}
+.kontakt-wrapper p {
+    font-size: 2rem;
+    font-family: var(--fontFamily-main);
+    color: var(--backgroundColor);
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-wrapper h1{
+        font-size: 2rem;
+    }
+    .kontakt-wrapper h3{
+        font-size: 1.5rem;
+    }
+    .kontakt-wrapper p{
+        font-size: 1rem;
+    }
+
+}
+.kontakt-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-container {
+        width: 100%;
+    }
+}
+.kontakt-flex {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-flex {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.kontakt-flex h3{
+    font-family: var(--fontFamily-main);
+    font-size: 2rem;
+    width: 70%;
+    text-align: center;
+}
+.kontakt-flex p{
+    font-family: var(--fontFamily-text);
+    width: 50%;
+    font-size: 2rem;
+    text-align: center;
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-flex h3{
+        font-size: 1.5rem;
+        width: 60%;
+    }
+    .kontakt-flex p{
+        font-size: 1rem;
+    }
+
+}
+.kontakt-flex-div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.kontakt-flex-div p{
+    font-family: var(--fontFamily-text);
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+}
+@media screen and (max-width: 1000px) {
+    .kontakt-flex-div p{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+}
