@@ -93,7 +93,7 @@
     .projekti-item:nth-child(3),
     .projekti-item:nth-child(4) {
         top: 0rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2.2rem;
     }
     .projekti-item:nth-child(odd) {
         margin-left: 10%;

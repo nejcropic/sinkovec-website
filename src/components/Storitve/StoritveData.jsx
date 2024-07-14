@@ -70,7 +70,7 @@ export const storitve = [
   },
   {
     icon: SkarpaIcon,
-    title: "Izdelava kamnitih škrap/izložb",
+    title: "Izdelava kamnitih škarp/izložb",
     image: Skarpe,
   },
   {

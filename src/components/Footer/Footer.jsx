@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
 import { Logo } from "../../index";
 
 function Footer() {
@@ -11,10 +10,12 @@ function Footer() {
         <div className="footer-container">
           <div className="footer-maintext">
             <img src={Logo} alt="" />
-            <p>
+            <h3>
               Zemeljska dela z gradbeno mehanizacijo <br />
               jože šinkovec s.p.
-            </p>
+            </h3>
+            <p>Zagradec 7</p>
+            <p>1303 Zagradec, Slovenija</p>
           </div>
 
           <div className="social-media">

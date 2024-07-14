@@ -30,7 +30,7 @@
 }
 .kontakt-wrapper p {
     font-size: 2rem;
-    font-family: var(--fontFamily-main);
+    font-family: var(--fontFamily-text);
     color: var(--backgroundColor);
 }
 @media screen and (max-width: 1000px) {

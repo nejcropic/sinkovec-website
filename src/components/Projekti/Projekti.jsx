@@ -1,7 +1,6 @@
 import React from "react";
 import "./Projekti.css";
 import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
 
 import MapIcon from "../../icons/map.png";
 import PhoneIcon from "../../icons/smartphone.png";
@@ -9,7 +8,7 @@ import PhoneIcon from "../../icons/smartphone.png";
 function Projekti({ refs }) {
   return (
     <>
-      <div className="projekti-wrapper" ref={refs.projektiRef}>
+      <div className="projekti-wrapper" ref={refs.ponudbaRef}>
         <h1>Ponudba</h1>
         <div className="projekti-container">
           <div className="projekti-cards">
@@ -20,7 +19,6 @@ function Projekti({ refs }) {
             </div>
             <div className="projekti-item">
               <img src={MapIcon} alt="map" />
-              {/* <i className={`fa-solid fa-map`}></i> */}
               <h3>Dolenjska</h3>
               <p>Območje Delovanja</p>
             </div>
@@ -39,7 +37,12 @@ function Projekti({ refs }) {
             <p>Izpolni obrazec in pošlji povpraševanje</p>
             <form action="./Projekti.php" method="post">
               <div className="form-container">
-                <input type="text" name="name" id="" placeholder="Vaše ime*" />
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Vaše ime in priimek*"
+                />
                 <input type="email" name="email" id="" placeholder="Email*" />
                 <select name="job" id="">
                   <option value="0">Vrsta storitve*</option>

@@ -14,7 +14,7 @@ function Hero() {
   return (
     <>
       <div className="hero-container">
-        <motion.div
+        {/* <motion.div
           ref={ref}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }}
@@ -22,7 +22,8 @@ function Hero() {
           className="upper-wrapper"
         >
           <img src={Logo} alt="" />
-        </motion.div>
+        </motion.div> */}
+
         <BackgroundSlider sliderData={storitve} sliderDataPhone={storitve} />
 
         <div className="overlay">
@@ -31,6 +32,7 @@ function Hero() {
               zemeljska dela z gradbeno mehanizacijo <br />
               jože šinkovec s.p.
             </p>
+            <img src={Logo} alt="" />
           </div>
         </div>
       </div>

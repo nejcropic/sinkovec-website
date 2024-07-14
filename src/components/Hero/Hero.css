@@ -16,22 +16,22 @@
     padding: 0;
     display: flex;
     align-items: center;
-}
+}/* 
 .upper-wrapper img {
     position: relative;
     left: 0%;
     width: auto;
     height: 80%; 
     margin-right: 90vw;
-}
+} */
 @media screen and (max-width: 1000px) {
     .upper-wrapper {
         width: 100vw;
         height: 10svh;
-    }
+    }/* 
     .upper-wrapper img{
         margin-right: 70vw;
-    }
+    } */
 }
 .title-container {
     overflow: hidden;
@@ -47,30 +47,35 @@
 
 .overlay {
     position: absolute;
-    top: 10svh;
+    top: 0svh;
     left: 0%;
-    height: 90svh;
+    height: 100svh;
     width: 70svw;
     z-index: 1;
-    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0))
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0))
 }
+
 @media screen and (max-width: 1000px) {
     .overlay {
-        top: 10svh;
+        top: 0; /* 10svh */
         left: 50%;
         transform: translateX(-50%);
-        height: calc(40svh);
+        height: 60svh;
         width: 100svw;
         background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0))
     }
 }
 .slider-main {
     position: absolute;
-    top: 30svh;
+    top: 20svh;
     left: 10%;
     z-index: 58;
-    width: 40%;      
+    width: 80%;      
     text-align: center; 
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
   .slider-main p{
     position: relative;
@@ -81,15 +86,32 @@
     font-family: var(--fontFamily-main);
     text-shadow: 1px 1px #000;
   }
+  .slider-main img{
+    position: relative;
+    bottom: 1rem; 
+    width: auto;
+    height: 12rem; 
+    margin: auto;
+    
+}
   @media screen and (max-width: 1000px) {
     .slider-main {
-      top: 10svh;
+      top: 25svh;
       left: 50%;
       transform: translateX(-50%);
       width: 90%;
+      flex-direction: column;
     }
     .slider-main p{
       font-size: 2rem;
       width: auto;
+    }
+    
+    .slider-main img{
+        position: relative;
+        top: 1rem; 
+        width: auto;
+        height: 6rem; 
+        margin: auto;
     }
   }

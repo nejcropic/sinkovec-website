@@ -15,9 +15,9 @@ const BackgroundSlider = ({ sliderData, sliderDataPhone }) => {
   const getData = () =>
     window.innerWidth <= 1000 ? sliderDataPhone : sliderData;
 
-  const goToSlide = (slideIndex) => {
+  /* const goToSlide = (slideIndex) => {
     setIndex(slideIndex);
-  };
+  }; */
 
   const goToNext = () => {
     setIndex((currentIndex) => (currentIndex + 1) % getData().length);

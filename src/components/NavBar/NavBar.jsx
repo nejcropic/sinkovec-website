@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import "./NavBar.css";
 import {
-  /* hideNavItemsVarian, */
   mobileMenuVariant,
   fadeInVariant,
   ulVariant,
@@ -11,9 +9,10 @@ import {
   hideNavItemsVariant,
 } from "../animations.jsx";
 import { NavMenuItems } from "./NavMenuItems.jsx";
-import { Logo } from "../../index.js";
+
 const NavBar = ({ refs }) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   const scrollToRef = (refName) => {
     const ref = refs[refName];
@@ -26,55 +25,78 @@ const NavBar = ({ refs }) => {
     }
   };
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="container">
+    <main className={`container ${scrollDirection === "down" ? "hidden" : ""}`}>
       <motion.nav
         initial="closed"
         animate={mobileNavOpen ? "opened" : "closed"}
       >
-        {/* <div className="logo-container">
-          <motion.h1 variants={hideNavItemsVariant}></motion.h1>
-          <img src={Logo} alt="Logo" />
-        </div> */}
         <div className="menu-container">
-          {/* <Link>Storitve</Link>
-          <Link>Storitve</Link>
-          <Link>Storitve</Link> */}
           <motion.div
             variants={hideNavItemsVariant}
+            className="menu-icon"
             onClick={() => setMobileNavOpen(true)}
           >
             <i className="fas fa-bars"></i>
           </motion.div>
-        </div>
-        <motion.div variants={mobileMenuVariant} className="mobile-menu">
-          <motion.button
-            variants={fadeInVariant}
-            onClick={() => setMobileNavOpen(false)}
-          >
-            <i className="fas fa-times"></i>
-          </motion.button>
-          <motion.ul variants={ulVariant}>
+          <ul className="desktop-menu">
             {NavMenuItems.map((navItem) => (
-              <motion.li whileTap={{ scale: 0.95 }} key={navItem.id}>
+              <li key={navItem.id} onClick={() => scrollToRef(navItem.ref)}>
+                {navItem.title}
+              </li>
+            ))}
+            <li onClick={() => scrollToRef("galerijaRef")}>Galerija</li>
+          </ul>
+        </div>
+        {mobileNavOpen && (
+          <motion.div variants={mobileMenuVariant} className="mobile-menu">
+            <motion.button
+              variants={fadeInVariant}
+              onClick={() => setMobileNavOpen(false)}
+            >
+              <i className="fas fa-times"></i>
+            </motion.button>
+            <motion.ul variants={ulVariant}>
+              {NavMenuItems.map((navItem) => (
+                <motion.li whileTap={{ scale: 0.95 }} key={navItem.id}>
+                  <motion.div
+                    onClick={() => scrollToRef(navItem.ref)}
+                    variants={liVariant}
+                  >
+                    {navItem.title}
+                  </motion.div>
+                </motion.li>
+              ))}
+              <motion.li whileTap={{ scale: 0.95 }}>
                 <motion.div
-                  onClick={() => scrollToRef(navItem.ref)}
+                  onClick={() => scrollToRef("galerijaRef")}
                   variants={liVariant}
                 >
-                  {navItem.title}
+                  Galerija
                 </motion.div>
               </motion.li>
-            ))}
-            <motion.li whileTap={{ scale: 0.95 }}>
-              <motion.div
-                onClick={() => scrollToRef("galerijaRef")}
-                variants={liVariant}
-              >
-                Galerija
-              </motion.div>
-            </motion.li>
-          </motion.ul>
-        </motion.div>
+            </motion.ul>
+          </motion.div>
+        )}
       </motion.nav>
     </main>
   );

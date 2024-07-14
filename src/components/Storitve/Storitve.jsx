@@ -48,6 +48,7 @@ function StoritveItem({ icon, title, image }) {
         </div>
         <div className="card-back">
           <img src={image} alt={title} />
+          <h2>{title}</h2>
         </div>
       </motion.div>
     </div>

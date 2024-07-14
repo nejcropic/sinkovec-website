@@ -4,13 +4,13 @@ export const NavMenuItems = [
     title: "Ponudba",
     ref: "ponudbaRef",
     cName: "nav-links",
-  },
+  } /* 
   {
     id: 1,
     title: "Projekti",
     ref: "projektiRef",
     cName: "nav-links",
-  },
+  }, */,
   {
     id: 2,
     title: "Storitve",
@@ -22,11 +22,11 @@ export const NavMenuItems = [
     title: "Podatki",
     ref: "podatkiRef",
     cName: "nav-links",
-  },
+  } /* 
   {
     id: 4,
     title: "O podjetju",
     ref: "kontaktRef",
     cName: "nav-links",
-  },
+  }, */,
 ];

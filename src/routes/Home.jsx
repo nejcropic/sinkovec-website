@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar/NavBar";
 import Hero from "../components/Hero/Hero";
 import Storitve from "../components/Storitve/Storitve";
 import Footer from "../components/Footer/Footer";
-import Ponudba from "../components/Ponudba/Ponudba";
 import Kontakt from "../components/Kontakt/Kontakt";
 /* ";
 
@@ -19,7 +18,6 @@ function Home() {
   const projektiRef = useRef(null);
   const storitveRef = useRef(null);
   const podatkiRef = useRef(null);
-  const povprasevanjeRef = useRef(null);
   const kontaktRef = useRef(null);
   const galerijaRef = useRef(null);
 
@@ -36,14 +34,9 @@ function Home() {
         }}
       />
       <Hero />
-      {/* <Ponudba
-        refs={{
-          ponudbaRef,
-        }}
-      /> */}
       <Projekti
         refs={{
-          projektiRef,
+          ponudbaRef,
         }}
       />
       <Storitve

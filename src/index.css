@@ -44,19 +44,19 @@
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
   height: 8px;
   background-color: var(--mainColor);
-  color:  var(--eerie-black-1);
+  color:  var(--backgroundColor);
 }
 *::-webkit-scrollbar-thumb {
-  color: var(--eerie-black-1);
+  width: 4px;
+  color: var(--mainColor);
 }
 
 .App {
   text-align: center;
   overflow-x: hidden;
-  background-color: var(--eerie-black-1);
 }
 
 a {

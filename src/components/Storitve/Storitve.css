@@ -93,6 +93,12 @@
     height: 90%;
     object-fit: cover;
 }
+.card-back h2 {
+    position: absolute;
+    width: 90%;
+    bottom: 22%;
+    background-color: rgba(0, 0, 0, 0.24);
+}
 .card-front {
     padding: 2rem 0;
 }
