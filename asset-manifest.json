@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sinkovec-website/static/css/main.e3283d9c.css",
-    "main.js": "/sinkovec-website/static/js/main.5063f6dd.js",
+    "main.css": "/sinkovec-website/static/css/main.79017b87.css",
+    "main.js": "/sinkovec-website/static/js/main.c9ab1799.js",
     "static/media/prevozi1.jpg": "/sinkovec-website/static/media/prevozi1.adcbd104cbe7a6aa7937.jpg",
     "static/media/agro5.jpg": "/sinkovec-website/static/media/agro5.d82baefd5260dd2493d4.jpg",
     "static/media/izkopi4.jpg": "/sinkovec-website/static/media/izkopi4.218484c65624efabf38d.jpg",
@@ -74,11 +74,11 @@
     "static/media/logo_transparent.png": "/sinkovec-website/static/media/logo_transparent.1d365a192c279232d7df.png",
     "static/media/wall.png": "/sinkovec-website/static/media/wall.a2e3eb00af5356585ff4.png",
     "index.html": "/sinkovec-website/index.html",
-    "main.e3283d9c.css.map": "/sinkovec-website/static/css/main.e3283d9c.css.map",
-    "main.5063f6dd.js.map": "/sinkovec-website/static/js/main.5063f6dd.js.map"
+    "main.79017b87.css.map": "/sinkovec-website/static/css/main.79017b87.css.map",
+    "main.c9ab1799.js.map": "/sinkovec-website/static/js/main.c9ab1799.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3283d9c.css",
-    "static/js/main.5063f6dd.js"
+    "static/css/main.79017b87.css",
+    "static/js/main.c9ab1799.js"
   ]
 }
