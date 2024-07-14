@@ -46,7 +46,7 @@ function Home() {
       />
       <Kontakt
         refs={{
-          kontaktRef,
+          podatkiRef,
         }}
       />
       <Galerija

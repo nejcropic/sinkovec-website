@@ -67,7 +67,7 @@
 }
 .slider-main {
     position: absolute;
-    top: 20svh;
+    top: 30svh;
     left: 10%;
     z-index: 58;
     width: 80%;      
@@ -80,7 +80,7 @@
   .slider-main p{
     position: relative;
     width: 50vw;
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
     color:var(--white);
     font-family: var(--fontFamily-main);
@@ -90,9 +90,17 @@
     position: relative;
     bottom: 1rem; 
     width: auto;
-    height: 12rem; 
+    height: 10rem; 
     margin: auto;
     
+}
+@media screen and (min-width: 1930px) {
+    .slider-main p{
+        font-size: 5rem;
+    }
+    .slider-main img{
+        height: 12rem; 
+    }
 }
   @media screen and (max-width: 1000px) {
     .slider-main {

@@ -33,7 +33,7 @@ function Projekti({ refs }) {
             </div>
           </div>
           <div className="projekti-contact">
-            <h1>Kontaktiraj nas</h1>
+            <h2>Kontaktiraj nas</h2>
             <p>Izpolni obrazec in pošlji povpraševanje</p>
             <form action="./Projekti.php" method="post">
               <div className="form-container">

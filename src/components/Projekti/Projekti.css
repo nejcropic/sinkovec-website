@@ -10,7 +10,7 @@
     font-family: var(--fontFamily-main);
     font-weight: 700;
     color: var(--mainColor);
-    margin: 2rem 0;
+    margin: 2rem 0 5rem 0;
 }
 @media screen and (max-width: 1000px) {
     .projekti-wrapper h1{
@@ -197,11 +197,16 @@
     margin: 0 auto;
     margin-bottom: 3rem;
 }
-.projekti-contact h1{
+.projekti-contact h2{
+    font-size: var(--fontSizePc);
+    font-family: var(--fontFamily-main);
+    font-weight: 700;
+    color: var(--mainColor);
     font-size: 2rem;
 }
 .projekti-contact p{
     font-family: var(--fontFamily-text);
+    color: white;
     font-size: 0.7rem;
     font-size: 1.5rem;
     margin-bottom: 1rem;

@@ -23,15 +23,23 @@
 }
 .kontakt-wrapper h3 {
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: var(--fontFamily-main);
     font-weight: 700;
     color: var(--backgroundColor);
 }
 .kontakt-wrapper p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--fontFamily-text);
     color: var(--backgroundColor);
+}
+@media screen and (min-width: 1930px) {
+    .kontakt-wrapper h3{
+        font-size: 3rem;
+    }
+    .kontakt-wrapper p{
+        font-size: 2rem;
+    }
 }
 @media screen and (max-width: 1000px) {
     .kontakt-wrapper h1{
@@ -78,8 +86,13 @@
 .kontakt-flex p{
     font-family: var(--fontFamily-text);
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
+}
+@media screen and (min-width: 1930px) {
+    .kontakt-flex p{
+        font-size: 2rem;
+    }
 }
 @media screen and (max-width: 1000px) {
     .kontakt-flex h3{
@@ -99,8 +112,14 @@
 .kontakt-flex-div p{
     font-family: var(--fontFamily-text);
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
+}
+
+@media screen and (min-width: 1930px) {
+    .kontakt-flex-div p{
+        font-size: 2rem;
+    }
 }
 @media screen and (max-width: 1000px) {
     .kontakt-flex-div p{

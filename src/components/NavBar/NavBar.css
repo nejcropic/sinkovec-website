@@ -50,8 +50,14 @@ nav .menu-container .desktop-menu li {
     color: white;
     text-shadow: 0px 0.1rem var(--mainColor);
 }
+
 nav .menu-container .desktop-menu li:hover {
     color: var(--mainColor);
+}
+@media screen and (min-width: 1930px) {
+    nav .menu-container .desktop-menu li {
+        font-size: 3rem;
+    }
 }
 @media screen and (max-width: 1000px) {
     nav .menu-container {
