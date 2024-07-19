@@ -1,6 +1,6 @@
 .footer-wrapper {
     height: auto;
-    width: 100svw;
+    width: 100vw;
     background-color: var(--backgroundColor);
     color: var(--mainColor);
 }
@@ -83,6 +83,7 @@
     margin: auto auto;
     font-family: var(--fontFamily-main);
     font-size: 1.2rem;
+    justify-content: space-between;
 }
 .social-media button {
     background-color: transparent;
@@ -111,11 +112,9 @@
 .social-media i:hover {
     color: var(--eerie-black-1);
 }
-
-.social-media-div {
-    justify-content: space-between;
+.social-media a{
+    margin: 0.5rem;
 }
-
 .footer-copyrights {
     position: relative;
     bottom: 0%;

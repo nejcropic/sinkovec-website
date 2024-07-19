@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nejcropic.github.io/sinkovec-website",
   "name": "sinkovec_website",
+  "homepage": "https://www.joze-sinkovec.si/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

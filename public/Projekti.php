@@ -2,12 +2,12 @@
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get POST data
-    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
-    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-    $job = isset($_POST['job']) ? trim($_POST['job']) : '';
-    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+    // Get POST data and sanitize
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $job = filter_input(INPUT_POST, 'job', FILTER_SANITIZE_STRING);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
     // Validate form fields
     if (empty($name)) {
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($email)) {
         $errors[] = 'E-naslov ni vnešen';
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'E-naslov ni pravilen';
     }
 
@@ -34,13 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If no errors, send email
     if (empty($errors)) {
-        // Recipient email address (replace with your own)
         $recipient = "joze.sinkovec@hotmail.com";
-
-        // Additional headers
-        $headers = "From: $name <$email>";
-
-        // Subject and email content
+        $headers = "From: $name <$email>\r\n";
+        $headers .= "Reply-To: $email\r\n";
         $subject = "New Contact Form Submission";
         $emailContent = "Ime: $name\n";
         $emailContent .= "E-naslov: $email\n";
@@ -48,9 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailContent .= "Telefonska številka: $phone\n";
         $emailContent .= "Sporočilo:\n$message\n";
 
-        // Send email
+        // Send email and check for success
         if (mail($recipient, $subject, $emailContent, $headers)) {
-            echo "Email sent successfully!";
+            // Redirect after successful email send
+            header("Location: /index.html");
+            exit;
         } else {
             echo "Failed to send email. Please try again later.";
         }

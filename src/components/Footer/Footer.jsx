@@ -23,7 +23,7 @@ function Footer() {
             <div className="social-media-div">
               <Link to="https://www.facebook.com/profile.php?id=100066861664020">
                 <button>
-                  <i class="fa-brands fa-facebook"></i>
+                  <i className="fa-brands fa-facebook"></i>
                 </button>
               </Link>
               <Link to="https://www.instagram.com/jozesinkovecc/">

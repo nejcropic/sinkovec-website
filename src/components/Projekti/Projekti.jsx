@@ -27,7 +27,11 @@ function Projekti({ refs }) {
               <h3>Povpraševanje</h3>
               <div className="projekti-flex">
                 <Link to="tel:+38631223082">
-                  <button>031-223-082</button>
+                  <p></p>
+                  <button>
+                    Jože Šinkovec <br />
+                    031-223-082
+                  </button>
                 </Link>
               </div>
             </div>
@@ -35,7 +39,7 @@ function Projekti({ refs }) {
           <div className="projekti-contact">
             <h2>Kontaktiraj nas</h2>
             <p>Izpolni obrazec in pošlji povpraševanje</p>
-            <form action="./Projekti.php" method="post">
+            <form action="/Projekti.php" method="post">
               <div className="form-container">
                 <input
                   type="text"
